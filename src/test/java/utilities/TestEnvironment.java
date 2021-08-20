@@ -16,7 +16,7 @@ import java.net.URL;
 public class TestEnvironment {
     private static final Logger LOGGER = LogManager.getLogger(TestEnvironment.class);
     /**
-     * This method will select the excecution envoirnment based on the user input
+     * This method will select the execution environment based on the user input
      * @return
      * @throws java.net.MalformedURLException
      */

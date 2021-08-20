@@ -20,11 +20,11 @@ public class BaseClass {
     String endTestCase = String.format("-------Test End: %s------", this.getClass().getName());
 
     @BeforeClass
-    public void addThread() throws MalformedURLException {
-        ThreadContext.put("threadName", this.getClass().getName());
+    public void addThread() {
+        ThreadContext.put("threadName", this.getClass().getName()); }
 
     @BeforeMethod
-    public void openBrowser()
+    public void openBrowser() throws MalformedURLException {
         String url = ReadConfigFiles.getPropertyValues("url");
         driver = TestEnvironment.selectTestExecutionEnvironment();
         LOGGER.info(testCaseName);
